@@ -2,22 +2,29 @@
 <html>
 
 <head>
-    <title>GIF Grid</title>
+    <title>p5.js Video Project</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.dom.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/addons/p5.sound.min.js"></script>
     <style>
-        .gif-container {
-            display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-template-rows: repeat(3, 1fr);
-            grid-gap: 10px;
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            text-align: center;
+            background-color: cornflowerblue;
         }
 
-        .gif-container img {
-            max-width: 100%;
-            height: auto;
+        canvas {
             display: block;
+            margin-inline: auto;
+            border: 10px solid;
+            margin-top: 50px;
         }
     </style>
-    <script>
+    <!-- <script>
         window.addEventListener("load", () => {
 
             //after 10 seconds go to the next page
@@ -26,10 +33,27 @@
             }, 10000);
 
         });
-    </script>
+    </script> -->
 </head>
 
 <body>
+
+    <script src="js/sketch3.js"></script>
+
+    <button id="continueButton" onclick="location.href='index.html'" style="
+    position:absolute;
+    bottom:30px;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, 0);
+    width: 200px;
+    margin-inline:auto;
+    border-radius: 70px;
+    font-family: 'Impact', sans-serif;
+    font-size: 3rem;">
+        Continue
+    </button>
+
     <div class="gif-container">
         <!-- <img src="assets/startups/1.gif" alt="GIF 1">
         <img src="assets/startups/2.gif" alt="GIF 2">
