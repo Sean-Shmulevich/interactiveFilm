@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Video Project</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body style="background:rgb(237, 100, 171)">
+  <main style="padding: 15% 0;  text-align: center;   width:100%; /*full width*/background:cornflowerblue;">
+    <h1 style="
+  font-family: 'Impact', sans-serif;
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 3px 3px 0px rgba(255, 60, 60, 0.7), -3px -3px 0px rgba(0, 0, 255, 0.6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  padding: 1rem;
+  filter: drop-shadow(0px 3px 5px rgba(0, 0, 0, 0.8));
+">
+      <span class="letter" style="display: inline-block; animation: updown 1s ease-in-out infinite alternate;">D</span>
+      <span class="letter"
+        style="display: inline-block; animation: updown 1s ease-in-out .1s infinite alternate;">i</span>
+      <span class="letter"
+        style="display: inline-block; animation: updown 1s ease-in-out .2s infinite alternate;">s</span>
+      <span class="letter"
+        style="display: inline-block; animation: updown 1s ease-in-out .3s infinite alternate;">t</span>
+      <span class="letter"
+        style="display: inline-block; animation: updown 1s ease-in-out .4s infinite alternate;">o</span>
+      <span class="letter"
+        style="display: inline-block; animation: updown 1s ease-in-out .5s infinite alternate;">r</span>
+      <span class="letter"
+        style="display: inline-block; animation: updown 1s ease-in-out .6s infinite alternate;">t</span>
+      <span class="letter"
+        style="display: inline-block; animation: updown 1s ease-in-out .7s infinite alternate;">i</span>
+      <span class="letter"
+        style="display: inline-block; animation: updown 1s ease-in-out .8s infinite alternate;">o</span>
+      <span class="letter"
+        style="display: inline-block; animation: updown 1s ease-in-out .9s infinite alternate;">n</span>
+      <p
+        style="font-size:1rem;text-shadow: 1px 1px 0px rgba(255, 60, 60, 0.9), -1px -1px 0px rgba(0, 0, 255, 0.9);color:black">
+        An interactive technology film project by Sean Shmulevich</p>
+    </h1>
+
+    <a href="pointillism.html">
+      <div id="playButton" style="margin-inline:auto;display:flex;align-items: center;justify-content:center;width:15%;border-radius: 20px;"
+        height="50px" width="50px">
+        <svg xmlns="http://www.w3.org/2000/svg" height="50px" width="50px" viewBox="0 0 64 64">
+          <defs>
+            <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="rgba(255, 60, 60, 0.9)" />
+              <stop offset="100%" stop-color="rgba(0, 0, 255, 0.7)" />
+            </linearGradient>
+          </defs>
+          <circle cx="34" cy="32" r="30" fill="url(#grad)" />
+          <polygon points="26,20 52,32 26,44" fill="#FFF" />
+        </svg>
+        <p style="transform:translateY(5px);font-family: 'Impact', sans-serif;font-size:1.5rem;margin-left:20px">Play
+        </p>
+      </div>
+    </a>
+
+  </main>
+
+</body>
+
+<script>
+
+  const letters = document.querySelectorAll('.letter');
+  letters.forEach((letter) => {
+    letter.addEventListener('mouseover', () => {
+      letter.style.transform = 'translateY(-10px)';
+    });
+    letter.addEventListener('mouseout', () => {
+      letter.style.transform = 'translateY(0)';
+    });
+  });
+</script>
+
+</html>

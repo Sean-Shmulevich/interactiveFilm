@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>p5.js Video Project</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        #container {
+            height: 100%;
+        }
+
+        body {
+            background: cornflowerblue;
+        }
+
+        /* #img1{
+            height: 33.33%;
+            overflow: hidden;
+        }
+        #img2{
+            height: 33.33%;
+            overflow: hidden;
+        } */
+    </style>
+</head>
+
+<body>
+    <script src="sketch1.js"></script>
+    <div id="personImage" style="display: flex;
+    margin-top: 10%;
+    flex-direction: column;
+    margin-inline: auto;
+    width: 500px;">
+
+    </div>
+    <div style="
+        width:100%;
+        text-align:center;
+        margin-top:20px;
+        position:absolute;
+        top:0;">
+        <button id="nextButton" style="
+            width: 250px;
+            margin-inline:auto;
+            border-radius: 70px;
+            font-family: 'Impact', sans-serif;
+            font-size: 3rem;">
+            Next Image
+        </button>
+
+    </div>
+    <button id="continueButton" onclick="location.href='kaleidoscope.html'" style="
+    position:absolute;
+    bottom:150px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 200px;
+    margin-inline:auto;
+    border-radius: 70px;
+    font-family: 'Impact', sans-serif;
+    font-size: 3rem;">
+        Continue
+    </button>
+</body>
+
+</html>
