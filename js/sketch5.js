@@ -25,12 +25,14 @@ function setup() {
 }
 
 function draw() {
+    // display video capture as the background
+    image(capture, 0, 0, width, height);
+        
+
     streams.forEach(function (stream) {
         stream.render();
     });
 
-    // display video capture as the background
-    image(capture, 0, 0, width, height);
 }
 
 
