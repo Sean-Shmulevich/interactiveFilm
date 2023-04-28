@@ -1,7 +1,7 @@
 //by Emily Xie
 var streams = [];
 var fadeInterval = 1.4;
-var symbolSize = 15;
+var symbolSize = 20;
 
 function setup() {
     createCanvas(800, 600);
@@ -25,12 +25,12 @@ function setup() {
 }
 
 function draw() {
-    // display video capture as the background
-    image(capture, 0, 0, width, height);
-
     streams.forEach(function (stream) {
         stream.render();
     });
+
+    // display video capture as the background
+    image(capture, 0, 0, width, height);
 }
 
 
