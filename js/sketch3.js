@@ -9,7 +9,7 @@ var mic; // Microphone library
 
 
 function setup() {
-    createCanvas(windowWidth-800, windowHeight-300);
+    createCanvas(windowWidth*5/7, windowHeight*2/3);
 
     mic = new p5.AudioIn();
     mic.start(); // Load the library 
