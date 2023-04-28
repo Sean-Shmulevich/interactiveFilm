@@ -1,11 +1,15 @@
-let symbolSize = 20;
+let symbolSize = 10;
 let streams = [];
+let capture;
+let videoImage;
 
 function setup() {
     createCanvas(800, 600);
     pixelDensity(1);
     background(0);
 
+    video = createCapture(VIDEO);
+    videoImage = createImage(width, height);
     let x = 0;
     for (let i = 0; i <= width / symbolSize; i++) {
         let stream = new Stream();
@@ -27,9 +31,11 @@ function draw() {
         image(video, 0, 0, width, height);
         pop();
     }
+    // Draw the current frame of the video feed to the image object
+    videoImage.copy(capture, 0, 0, capture.width, capture.height, 0, 0, width, height);
 
-    // Set matrix rain effect on top of background
-    background(0, 150);
+    // Set the background to the video image
+    background(videoImage);
     streams.forEach(function (stream) {
         stream.render();
     });
