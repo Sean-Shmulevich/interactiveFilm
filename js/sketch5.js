@@ -1,4 +1,3 @@
-//by Emily Xie
 var streams = [];
 var fadeInterval = 1.4;
 var symbolSize = 20;
