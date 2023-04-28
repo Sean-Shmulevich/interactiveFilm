@@ -8,7 +8,6 @@ function setup() {
     pixelDensity(1);
     background(0);
 
-    video = createCapture(VIDEO);
     videoImage = createImage(width, height);
     let x = 0;
     for (let i = 0; i <= width / symbolSize; i++) {
@@ -22,15 +21,7 @@ function setup() {
 }
 
 function draw() {
-    // Get camera feed and set as background
-    let video = document.querySelector('video');
-    if (video) {
-        push();
-        translate(width, 0);
-        scale(-1, 1);
-        image(video, 0, 0, width, height);
-        pop();
-    }
+
     // Draw the current frame of the video feed to the image object
     videoImage.copy(capture, 0, 0, capture.width, capture.height, 0, 0, width, height);
 
